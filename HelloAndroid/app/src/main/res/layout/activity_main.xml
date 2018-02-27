@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.helloandroid.MainActivity">
+
+    <ImageView
+        android:id="@+id/udacity_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/logo_desc"
+        app:srcCompat="@drawable/udacity_logo"
+        android:scaleType="fitStart"
+        android:adjustViewBounds="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/udacity_logo"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/person">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/person_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/person_icon"
+                android:padding="4dp"/>
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:padding="4dp"
+                android:id="@+id/udacity"
+                android:layout_toRightOf="@id/person_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/home"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_below="@id/person">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/home_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/home_icon"
+                android:padding="4dp"/>
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:id="@+id/a1"
+                android:layout_toRightOf="@id/home_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/address1"
+                android:padding="4dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_below="@id/home"
+            android:id="@+id/phone">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:padding="4dp"
+                android:id="@+id/phone_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/phone_icon"/>
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:padding="4dp"
+                android:layout_toRightOf="@id/phone_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phone"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:padding="4dp"
+                android:id="@+id/www_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/www_icon"
+                />
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:padding="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/www_icon"
+                android:text="@string/web"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

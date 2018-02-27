@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Udacity</string>
+    <string name="logo_desc">Image of Udacity\'s Logo</string>
+    <string name="name">Udacity</string>
+    <string name="address1">2465 Latham St\nMountain View, CA 94043</string>
+    <string name='phone'>650-555-5555</string>
+    <string name='web'>www.udacity.com</string>
+</resources>
