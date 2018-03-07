@@ -1,31 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.helloandroid.MainActivity">
+    tools:context="com.example.android.helloandroid.MainActivity"
+    android:orientation="horizontal">
 
     <ImageView
+        android:layout_weight="1"
         android:id="@+id/udacity_logo"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
         android:contentDescription="@string/logo_desc"
         app:srcCompat="@drawable/udacity_logo"
         android:scaleType="centerCrop"/>
 
     <LinearLayout
-        android:layout_alignParentBottom="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:paddingLeft="8dp"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
         <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1"
             android:id="@+id/person">
             <ImageView
-                android:tint="#ffffff"
                 android:layout_centerVertical="true"
                 android:id="@+id/person_icon"
                 android:layout_width="wrap_content"
@@ -34,7 +36,6 @@
                 android:padding="4dp"/>
 
             <TextView
-                android:textColor="#ffffff"
                 android:layout_centerVertical="true"
                 android:padding="4dp"
                 android:id="@+id/udacity"
@@ -46,12 +47,11 @@
 
         <RelativeLayout
             android:id="@+id/home"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1"
             android:layout_below="@id/person">
             <ImageView
-                android:tint="#ffffff"
                 android:layout_centerVertical="true"
                 android:id="@+id/home_icon"
                 android:layout_width="wrap_content"
@@ -60,7 +60,6 @@
                 android:padding="4dp"/>
 
             <TextView
-                android:textColor="#ffffff"
                 android:layout_centerVertical="true"
                 android:id="@+id/a1"
                 android:layout_toRightOf="@id/home_icon"
@@ -72,13 +71,12 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1"
             android:layout_below="@id/home"
             android:id="@+id/phone">
             <ImageView
-                android:tint="#ffffff"
                 android:layout_centerVertical="true"
                 android:padding="4dp"
                 android:id="@+id/phone_icon"
@@ -87,7 +85,6 @@
                 android:src="@drawable/phone_icon"/>
 
             <TextView
-                android:textColor="#ffffff"
                 android:layout_centerVertical="true"
                 android:padding="4dp"
                 android:layout_toRightOf="@id/phone_icon"
@@ -98,12 +95,11 @@
 
         <RelativeLayout
             android:layout_below="@id/phone"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1">
 
             <ImageView
-                android:tint="#ffffff"
                 android:layout_centerVertical="true"
                 android:padding="4dp"
                 android:id="@+id/www_icon"
@@ -113,7 +109,6 @@
                 />
 
             <TextView
-                android:textColor="#ffffff"
                 android:layout_centerVertical="true"
                 android:padding="4dp"
                 android:layout_width="wrap_content"
@@ -123,4 +118,4 @@
         </RelativeLayout>
     </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>
