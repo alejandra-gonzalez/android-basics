@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Sailing Score Keeper</string>
+    <string name="team1">Team 1 Name Here</string>
+    <string name="team2">Team 2 Name Here</string>
+    <string name="cont">Tap Here to Continue</string>
+    <string name="input_instructions">Hello and welcome to Sailing Score Keeper!\n\nTo continue,
+        enter the names of the teams that will be competing below.</string>
+    <string name="starting_score">0</string>
+    <string name="first">Come in first place</string>
+    <string name="second">Come in second place</string>
+</resources>

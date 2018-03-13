@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.sailingscorekeeper.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/input_instructions"
+        android:textSize="17sp"
+        android:padding="16dp"/>
+
+    <EditText
+        android:id="@+id/teamAname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/team1"
+        android:gravity="center_horizontal"
+        android:layout_margin="8dp"/>
+
+    <EditText
+        android:id="@+id/teamBname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/team2"
+        android:gravity="center_horizontal"
+        android:layout_margin="8dp"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cont"
+        android:layout_margin="8dp"
+        android:onClick="getTeamsNames"/>
+
+</LinearLayout>
