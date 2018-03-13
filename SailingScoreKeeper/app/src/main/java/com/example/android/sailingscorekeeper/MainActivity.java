@@ -23,10 +23,10 @@ public class MainActivity extends AppCompatActivity {
         String teamAName = teamA.getText().toString();
         String teamBName = teamB.getText().toString();
 
-        if(teamAName.isEmpty()){
+        if(teamAName.isEmpty() || teamAName.trim().length() == 0){
             teamAName = "Team A";
         }
-        if(teamBName.isEmpty()){
+        if(teamBName.isEmpty() || teamBName.trim().length() == 0){
             teamBName = "Team B";
         }
 

@@ -8,4 +8,5 @@
     <string name="starting_score">0</string>
     <string name="first">Come in first place</string>
     <string name="second">Come in second place</string>
+    <string name="resetGame">Reset</string>
 </resources>
