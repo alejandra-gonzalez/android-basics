@@ -10,16 +10,17 @@ import android.widget.TextView;
 
 public class ScoreKeeping extends AppCompatActivity {
 
-    int scoreTeamA = 0;
-    int scoreTeamB = 0;
+    int scoreTeamA;
+    int scoreTeamB;
     TextView textViewA;
     TextView textViewB;
     TextView teamAScore;
     TextView teamBScore;
 
     /**
-     * Places team names in the right TextViews and "Tie with " Buttons
-     * @param savedInstanceState Bundle containing team names
+     * Places team names in the right TextViews and "Tie with " Buttons.
+     * Places team scores in the right TextViews.
+     * @param savedInstanceState Bundle containing team names and scores
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,34 +108,56 @@ public class ScoreKeeping extends AppCompatActivity {
     public void resetGame(View view){
         scoreTeamA = 0;
         scoreTeamB = 0;
-        textViewA.setTextColor(Color.parseColor("#616161"));
-        teamAScore.setTextColor(Color.parseColor("#616161"));
-        textViewB.setTextColor(Color.parseColor("#616161"));
-        teamBScore.setTextColor(Color.parseColor("#616161"));
+        textViewA.setTextColor(Color.parseColor("#000000"));
+        teamAScore.setTextColor(Color.parseColor("#000000"));
+        textViewB.setTextColor(Color.parseColor("#000000"));
+        teamBScore.setTextColor(Color.parseColor("#000000"));
         displayScore();
     }
 
     /**
-     * The current winner's name and score are shown in blue text.
+     * The current winner's name and score are shown in salmon colored text.
      */
     public void showWinner(View view){
         if (scoreTeamA < scoreTeamB){
-            textViewA.setTextColor(Color.parseColor("#0645AD"));
-            teamAScore.setTextColor(Color.parseColor("#0645AD"));
-            textViewB.setTextColor(Color.parseColor("#616161"));
-            teamBScore.setTextColor(Color.parseColor("#616161"));
+            textViewA.setTextColor(Color.parseColor("#ffa07a"));
+            teamAScore.setTextColor(Color.parseColor("#ffa07a"));
+            textViewB.setTextColor(Color.parseColor("#000000"));
+            teamBScore.setTextColor(Color.parseColor("#000000"));
         }
         else if(scoreTeamB < scoreTeamA){
-            textViewB.setTextColor(Color.parseColor("#0645AD"));
-            teamBScore.setTextColor(Color.parseColor("#0645AD"));
-            textViewA.setTextColor(Color.parseColor("#616161"));
-            teamAScore.setTextColor(Color.parseColor("#616161"));
+            textViewB.setTextColor(Color.parseColor("#ffa07a"));
+            teamBScore.setTextColor(Color.parseColor("#ffa07a"));
+            textViewA.setTextColor(Color.parseColor("#000000"));
+            teamAScore.setTextColor(Color.parseColor("#000000"));
         }
         else {
-            textViewA.setTextColor(Color.parseColor("#0645AD"));
-            teamAScore.setTextColor(Color.parseColor("#0645AD"));
-            textViewB.setTextColor(Color.parseColor("#0645AD"));
-            teamBScore.setTextColor(Color.parseColor("#0645AD"));
+            textViewA.setTextColor(Color.parseColor("#ffa07a"));
+            teamAScore.setTextColor(Color.parseColor("#ffa07a"));
+            textViewB.setTextColor(Color.parseColor("#ffa07a"));
+            teamBScore.setTextColor(Color.parseColor("#ffa07a"));
         }
+    }
+
+    /**
+     * This stores the teams' scores in case of orientation change.
+     */
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        savedInstanceState.putInt("teamAscore", scoreTeamA);
+        savedInstanceState.putInt("teamBscore", scoreTeamB);
+        super.onSaveInstanceState(savedInstanceState);
+    }
+
+    /**
+     * This restores the teams' scores in case of orientation change.
+     */
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        scoreTeamA = savedInstanceState.getInt("teamAscore");
+        scoreTeamB = savedInstanceState.getInt("teamBscore");
+
+        teamAScore.setText(String.valueOf(scoreTeamA));
+        teamBScore.setText(String.valueOf(scoreTeamB));
     }
 }
