@@ -3,13 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.sailingscorekeeper.ScoreKeeping"
-    android:background="@drawable/bg">
+    android:background="@drawable/bg"
+    tools:context="com.example.android.sailingscorekeeper.ScoreKeeping">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -26,51 +26,51 @@
                     android:id="@+id/team_a_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
                     android:fontFamily="sans-serif-medium"
-                    android:textSize="14sp"
-                    android:textColor="#000000"/>
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/mainText"
+                    android:textSize="14sp" />
 
                 <TextView
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="24dp"
                     android:id="@+id/team_a_score"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginTop="16dp"
                     android:fontFamily="sans-serif-light"
-                    android:textSize="56sp"
-                    android:textColor="#000000"
-                    android:text="@string/starting_score"/>
+                    android:gravity="center_horizontal"
+                    android:text="@string/starting_score"
+                    android:textColor="@color/mainText"
+                    android:textSize="56sp" />
 
                 <Button
                     android:id="@+id/team_a_first"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
-                    android:layout_marginBottom="8dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/first"
-                    android:onClick="firstPlace"/>
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:onClick="firstPlace"
+                    android:text="@string/first" />
 
                 <Button
                     android:id="@+id/team_a_second"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
-                    android:layout_marginBottom="8dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/second"
-                    android:onClick="secondPlace"/>
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:onClick="secondPlace"
+                    android:text="@string/second" />
 
                 <Button
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
-                    android:layout_marginBottom="8dp"
+                    android:id="@+id/team_a_tie"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/team_a_tie"
-                    android:onClick="tied"/>
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:onClick="tied" />
             </LinearLayout>
 
             <View
@@ -90,51 +90,51 @@
                     android:id="@+id/team_b_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
                     android:fontFamily="sans-serif-medium"
-                    android:textSize="14sp"
-                    android:textColor="#000000"/>
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/mainText"
+                    android:textSize="14sp" />
 
                 <TextView
-                    android:text="@string/starting_score"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="24dp"
                     android:id="@+id/team_b_score"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginTop="16dp"
                     android:fontFamily="sans-serif-light"
-                    android:textSize="56sp"
-                    android:textColor="#000000"/>
+                    android:gravity="center_horizontal"
+                    android:text="@string/starting_score"
+                    android:textColor="@color/mainText"
+                    android:textSize="56sp" />
 
                 <Button
                     android:id="@+id/team_b_first"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
-                    android:layout_marginBottom="8dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/first"
-                    android:onClick="firstPlace"/>
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:onClick="firstPlace"
+                    android:text="@string/first" />
 
                 <Button
                     android:id="@+id/team_b_second"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
-                    android:layout_marginBottom="8dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/second"
-                    android:onClick="secondPlace"/>
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:onClick="secondPlace"
+                    android:text="@string/second" />
 
                 <Button
                     android:id="@+id/team_b_tie"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
-                    android:layout_marginBottom="8dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:onClick="tied"/>
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:onClick="tied" />
             </LinearLayout>
 
         </LinearLayout>
@@ -142,20 +142,20 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:layout_margin="16dp">
+            android:layout_margin="16dp"
+            android:gravity="center_horizontal">
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/resetGame"
-                android:onClick="resetGame"/>
+                android:onClick="resetGame"
+                android:text="@string/resetGame" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/winner"
-                android:onClick="showWinner"/>
+                android:onClick="showWinner"
+                android:text="@string/winner" />
 
         </LinearLayout>
 

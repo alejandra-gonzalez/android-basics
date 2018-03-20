@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,8 +8,8 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/bg"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,36 +20,35 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="@string/input_instructions"
-            android:textSize="17sp"
             android:padding="16dp"
-            android:textColor="#000000"/>
+            android:text="@string/input_instructions"
+            android:textColor="@color/mainText"
+            android:textSize="17sp" />
 
         <EditText
-            android:textColorHint="#272727"
             android:id="@+id/teamAname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/team1"
+            android:layout_margin="8dp"
             android:gravity="center_horizontal"
-            android:layout_margin="8dp"/>
+            android:hint="@string/team1"
+            android:textColorHint="@color/hintText" />
 
         <EditText
-            android:textColorHint="#272727"
             android:id="@+id/teamBname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/team2"
-            android:gravity="center_horizontal"
             android:layout_margin="8dp"
-            />
+            android:gravity="center_horizontal"
+            android:hint="@string/team2"
+            android:textColorHint="@color/hintText" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/cont"
             android:layout_margin="8dp"
-            android:onClick="getTeamsNames"/>
+            android:onClick="getTeamsNames"
+            android:text="@string/cont" />
 
     </LinearLayout>
 

@@ -12,10 +12,14 @@ public class ScoreKeeping extends AppCompatActivity {
 
     int scoreTeamA;
     int scoreTeamB;
+
     TextView textViewA;
     TextView textViewB;
     TextView teamAScore;
     TextView teamBScore;
+
+    int mainText = getResources().getColor(R.color.mainText);
+    int winnerText = getResources().getColor(R.color.winner);
 
     /**
      * Places team names in the right TextViews and "Tie with " Buttons.
@@ -108,10 +112,10 @@ public class ScoreKeeping extends AppCompatActivity {
     public void resetGame(View view){
         scoreTeamA = 0;
         scoreTeamB = 0;
-        textViewA.setTextColor(Color.parseColor("#000000"));
-        teamAScore.setTextColor(Color.parseColor("#000000"));
-        textViewB.setTextColor(Color.parseColor("#000000"));
-        teamBScore.setTextColor(Color.parseColor("#000000"));
+        textViewA.setTextColor(mainText);
+        teamAScore.setTextColor(mainText);
+        textViewB.setTextColor(mainText);
+        teamBScore.setTextColor(mainText);
         displayScore();
     }
 
@@ -120,22 +124,22 @@ public class ScoreKeeping extends AppCompatActivity {
      */
     public void showWinner(View view){
         if (scoreTeamA < scoreTeamB){
-            textViewA.setTextColor(Color.parseColor("#ffa07a"));
-            teamAScore.setTextColor(Color.parseColor("#ffa07a"));
-            textViewB.setTextColor(Color.parseColor("#000000"));
-            teamBScore.setTextColor(Color.parseColor("#000000"));
+            textViewA.setTextColor(winnerText);
+            teamAScore.setTextColor(winnerText);
+            textViewB.setTextColor(mainText);
+            teamBScore.setTextColor(mainText);
         }
         else if(scoreTeamB < scoreTeamA){
-            textViewB.setTextColor(Color.parseColor("#ffa07a"));
-            teamBScore.setTextColor(Color.parseColor("#ffa07a"));
-            textViewA.setTextColor(Color.parseColor("#000000"));
-            teamAScore.setTextColor(Color.parseColor("#000000"));
+            textViewB.setTextColor(winnerText);
+            teamBScore.setTextColor(winnerText);
+            textViewA.setTextColor(mainText);
+            teamAScore.setTextColor(mainText);
         }
         else {
-            textViewA.setTextColor(Color.parseColor("#ffa07a"));
-            teamAScore.setTextColor(Color.parseColor("#ffa07a"));
-            textViewB.setTextColor(Color.parseColor("#ffa07a"));
-            teamBScore.setTextColor(Color.parseColor("#ffa07a"));
+            textViewA.setTextColor(winnerText);
+            teamAScore.setTextColor(winnerText);
+            textViewB.setTextColor(winnerText);
+            teamBScore.setTextColor(winnerText);
         }
     }
 
