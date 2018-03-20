@@ -18,9 +18,6 @@ public class ScoreKeeping extends AppCompatActivity {
     TextView teamAScore;
     TextView teamBScore;
 
-    int mainText = getResources().getColor(R.color.mainText);
-    int winnerText = getResources().getColor(R.color.winner);
-
     /**
      * Places team names in the right TextViews and "Tie with " Buttons.
      * Places team scores in the right TextViews.
@@ -112,10 +109,10 @@ public class ScoreKeeping extends AppCompatActivity {
     public void resetGame(View view){
         scoreTeamA = 0;
         scoreTeamB = 0;
-        textViewA.setTextColor(mainText);
-        teamAScore.setTextColor(mainText);
-        textViewB.setTextColor(mainText);
-        teamBScore.setTextColor(mainText);
+        textViewA.setTextColor(getResources().getColor(R.color.mainText));
+        teamAScore.setTextColor(getResources().getColor(R.color.mainText));
+        textViewB.setTextColor(getResources().getColor(R.color.mainText));
+        teamBScore.setTextColor(getResources().getColor(R.color.mainText));
         displayScore();
     }
 
@@ -124,22 +121,22 @@ public class ScoreKeeping extends AppCompatActivity {
      */
     public void showWinner(View view){
         if (scoreTeamA < scoreTeamB){
-            textViewA.setTextColor(winnerText);
-            teamAScore.setTextColor(winnerText);
-            textViewB.setTextColor(mainText);
-            teamBScore.setTextColor(mainText);
+            textViewA.setTextColor(getResources().getColor(R.color.winner));
+            teamAScore.setTextColor(getResources().getColor(R.color.winner));
+            textViewB.setTextColor(getResources().getColor(R.color.mainText));
+            teamBScore.setTextColor(getResources().getColor(R.color.mainText));
         }
         else if(scoreTeamB < scoreTeamA){
-            textViewB.setTextColor(winnerText);
-            teamBScore.setTextColor(winnerText);
-            textViewA.setTextColor(mainText);
-            teamAScore.setTextColor(mainText);
+            textViewB.setTextColor(getResources().getColor(R.color.winner));
+            teamBScore.setTextColor(getResources().getColor(R.color.winner));
+            textViewA.setTextColor(getResources().getColor(R.color.mainText));
+            teamAScore.setTextColor(getResources().getColor(R.color.mainText));
         }
         else {
-            textViewA.setTextColor(winnerText);
-            teamAScore.setTextColor(winnerText);
-            textViewB.setTextColor(winnerText);
-            teamBScore.setTextColor(winnerText);
+            textViewA.setTextColor(getResources().getColor(R.color.winner));
+            teamAScore.setTextColor(getResources().getColor(R.color.winner));
+            textViewB.setTextColor(getResources().getColor(R.color.winner));
+            teamBScore.setTextColor(getResources().getColor(R.color.winner));
         }
     }
 
