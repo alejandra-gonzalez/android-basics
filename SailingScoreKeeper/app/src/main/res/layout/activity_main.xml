@@ -20,16 +20,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:padding="16dp"
+            android:padding="@dimen/padd_marg_16dp"
             android:text="@string/input_instructions"
             android:textColor="@color/mainText"
-            android:textSize="17sp" />
+            android:textSize="@dimen/text_17sp" />
 
         <EditText
             android:id="@+id/teamAname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_margin="@dimen/padd_marg_8dp"
             android:gravity="center_horizontal"
             android:hint="@string/team1"
             android:textColorHint="@color/hintText" />
@@ -38,7 +38,7 @@
             android:id="@+id/teamBname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_margin="@dimen/padd_marg_8dp"
             android:gravity="center_horizontal"
             android:hint="@string/team2"
             android:textColorHint="@color/hintText" />
@@ -46,7 +46,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_margin="@dimen/padd_marg_8dp"
             android:onClick="getTeamsNames"
             android:text="@string/cont" />
 

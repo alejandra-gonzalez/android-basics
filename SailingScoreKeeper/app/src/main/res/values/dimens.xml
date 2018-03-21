@@ -1,0 +1,13 @@
+<resources>
+
+    <dimen name="padd_marg_16dp">16dp</dimen>
+    <dimen name="text_17sp">17sp</dimen>
+    <dimen name="padd_marg_8dp">8dp</dimen>
+    <dimen name="text_14sp">14sp</dimen>
+    <dimen name="padd_marg_24dp">24dp</dimen>
+    <dimen name="text_56sp">56sp</dimen>
+    <dimen name="text_32sp">32sp</dimen>
+    <dimen name="width_height_0dp">0dp</dimen>
+    <dimen name="width_height_1dp">1dp</dimen>
+
+</resources>

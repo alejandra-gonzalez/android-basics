@@ -14,10 +14,10 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="@dimen/padd_marg_16dp">
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="@dimen/width_height_0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical">
@@ -29,27 +29,27 @@
                     android:fontFamily="sans-serif-medium"
                     android:gravity="center_horizontal"
                     android:textColor="@color/mainText"
-                    android:textSize="14sp" />
+                    android:textSize="@dimen/text_14sp" />
 
                 <TextView
                     android:id="@+id/team_a_score"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="24dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="@dimen/padd_marg_24dp"
+                    android:layout_marginTop="@dimen/padd_marg_16dp"
                     android:fontFamily="sans-serif-light"
                     android:gravity="center_horizontal"
                     android:text="@string/starting_score"
                     android:textColor="@color/mainText"
-                    android:textSize="56sp" />
+                    android:textSize="@dimen/text_56sp" />
 
                 <Button
                     android:id="@+id/team_a_first"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="@dimen/padd_marg_8dp"
+                    android:layout_marginLeft="@dimen/padd_marg_24dp"
+                    android:layout_marginRight="@dimen/padd_marg_24dp"
                     android:onClick="firstPlace"
                     android:text="@string/first" />
 
@@ -57,9 +57,9 @@
                     android:id="@+id/team_a_second"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="@dimen/padd_marg_8dp"
+                    android:layout_marginLeft="@dimen/padd_marg_24dp"
+                    android:layout_marginRight="@dimen/padd_marg_24dp"
                     android:onClick="secondPlace"
                     android:text="@string/second" />
 
@@ -67,21 +67,21 @@
                     android:id="@+id/team_a_tie"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="@dimen/padd_marg_8dp"
+                    android:layout_marginLeft="@dimen/padd_marg_24dp"
+                    android:layout_marginRight="@dimen/padd_marg_24dp"
                     android:onClick="tied" />
             </LinearLayout>
 
             <View
-                android:layout_width="1dp"
+                android:layout_width="@dimen/width_height_1dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/darker_gray">
 
             </View>
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="@dimen/width_height_0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical">
@@ -93,27 +93,27 @@
                     android:fontFamily="sans-serif-medium"
                     android:gravity="center_horizontal"
                     android:textColor="@color/mainText"
-                    android:textSize="14sp" />
+                    android:textSize="@dimen/text_14sp" />
 
                 <TextView
                     android:id="@+id/team_b_score"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="24dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="@dimen/padd_marg_24dp"
+                    android:layout_marginTop="@dimen/padd_marg_16dp"
                     android:fontFamily="sans-serif-light"
                     android:gravity="center_horizontal"
                     android:text="@string/starting_score"
                     android:textColor="@color/mainText"
-                    android:textSize="56sp" />
+                    android:textSize="@dimen/text_56sp" />
 
                 <Button
                     android:id="@+id/team_b_first"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="@dimen/padd_marg_8dp"
+                    android:layout_marginLeft="@dimen/padd_marg_24dp"
+                    android:layout_marginRight="@dimen/padd_marg_24dp"
                     android:onClick="firstPlace"
                     android:text="@string/first" />
 
@@ -121,9 +121,9 @@
                     android:id="@+id/team_b_second"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="@dimen/padd_marg_8dp"
+                    android:layout_marginLeft="@dimen/padd_marg_24dp"
+                    android:layout_marginRight="@dimen/padd_marg_24dp"
                     android:onClick="secondPlace"
                     android:text="@string/second" />
 
@@ -131,9 +131,9 @@
                     android:id="@+id/team_b_tie"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="@dimen/padd_marg_8dp"
+                    android:layout_marginLeft="@dimen/padd_marg_24dp"
+                    android:layout_marginRight="@dimen/padd_marg_24dp"
                     android:onClick="tied" />
             </LinearLayout>
 
@@ -142,7 +142,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_margin="@dimen/padd_marg_16dp"
             android:gravity="center_horizontal">
 
             <Button
