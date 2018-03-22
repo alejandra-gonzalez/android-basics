@@ -8,4 +8,41 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="teamNameEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/padd_marg_8dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColorHint">@color/hintText</item>
+    </style>
+
+    <style name="teamNameTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">@color/mainText</item>
+        <item name="android:textSize">@dimen/text_14sp</item>
+    </style>
+
+    <style name="teamScoreTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/padd_marg_24dp</item>
+        <item name="android:layout_marginTop">@dimen/padd_marg_16dp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:text">@string/starting_score</item>
+        <item name="android:textColor">@color/mainText</item>
+        <item name="android:textSize">@dimen/text_56sp</item>
+    </style>
+
+    <style name="scoreButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/padd_marg_8dp</item>
+        <item name="android:layout_marginLeft">@dimen/padd_marg_24dp</item>
+        <item name="android:layout_marginRight">@dimen/padd_marg_24dp</item>
+    </style>
+
 </resources>

@@ -18,6 +18,9 @@ public class ScoreKeeping extends AppCompatActivity {
     TextView teamAScore;
     TextView teamBScore;
 
+    final String teamAKey = "teamAscore";
+    final String teamBKey = "teamBscore";
+
     /**
      * Places team names in the right TextViews and "Tie with " Buttons.
      * Places team scores in the right TextViews.
@@ -145,8 +148,8 @@ public class ScoreKeeping extends AppCompatActivity {
      */
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
-        savedInstanceState.putInt("teamAscore", scoreTeamA);
-        savedInstanceState.putInt("teamBscore", scoreTeamB);
+        savedInstanceState.putInt(teamAKey, scoreTeamA);
+        savedInstanceState.putInt(teamBKey, scoreTeamB);
         super.onSaveInstanceState(savedInstanceState);
     }
 
@@ -155,8 +158,8 @@ public class ScoreKeeping extends AppCompatActivity {
      */
     @Override
     public void onRestoreInstanceState(Bundle savedInstanceState) {
-        scoreTeamA = savedInstanceState.getInt("teamAscore");
-        scoreTeamB = savedInstanceState.getInt("teamBscore");
+        scoreTeamA = savedInstanceState.getInt(teamAKey);
+        scoreTeamB = savedInstanceState.getInt(teamBKey);
 
         teamAScore.setText(String.valueOf(scoreTeamA));
         teamBScore.setText(String.valueOf(scoreTeamB));

@@ -25,52 +25,27 @@
 
             <TextView
                 android:id="@+id/team_a_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
-                android:gravity="center_horizontal"
-                android:textColor="@color/mainText"
-                android:textSize="@dimen/text_14sp" />
+                style="@style/teamNameTextView"/>
 
             <TextView
                 android:id="@+id/team_a_score"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/padd_marg_24dp"
-                android:layout_marginTop="@dimen/padd_marg_16dp"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center_horizontal"
-                android:text="@string/starting_score"
-                android:textColor="@color/mainText"
-                android:textSize="@dimen/text_56sp" />
+                style="@style/teamScoreTextView"/>
 
             <Button
                 android:id="@+id/team_a_first"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/padd_marg_8dp"
-                android:layout_marginLeft="@dimen/padd_marg_24dp"
-                android:layout_marginRight="@dimen/padd_marg_24dp"
+                style="@style/scoreButton"
                 android:onClick="firstPlace"
                 android:text="@string/first" />
 
             <Button
                 android:id="@+id/team_a_second"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/padd_marg_8dp"
-                android:layout_marginLeft="@dimen/padd_marg_24dp"
-                android:layout_marginRight="@dimen/padd_marg_24dp"
+                style="@style/scoreButton"
                 android:onClick="secondPlace"
                 android:text="@string/second" />
 
             <Button
                 android:id="@+id/team_a_tie"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/padd_marg_8dp"
-                android:layout_marginLeft="@dimen/padd_marg_24dp"
-                android:layout_marginRight="@dimen/padd_marg_24dp"
+                style="@style/scoreButton"
                 android:onClick="tied" />
         </LinearLayout>
 
@@ -89,52 +64,27 @@
 
             <TextView
                 android:id="@+id/team_b_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
-                android:gravity="center_horizontal"
-                android:textColor="@color/mainText"
-                android:textSize="@dimen/text_14sp" />
+                style="@style/teamNameTextView" />
 
             <TextView
                 android:id="@+id/team_b_score"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/padd_marg_24dp"
-                android:layout_marginTop="@dimen/padd_marg_16dp"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center_horizontal"
-                android:text="@string/starting_score"
-                android:textColor="@color/mainText"
-                android:textSize="@dimen/text_56sp" />
+                style="@style/teamScoreTextView" />
 
             <Button
                 android:id="@+id/team_b_first"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/padd_marg_8dp"
-                android:layout_marginLeft="@dimen/padd_marg_24dp"
-                android:layout_marginRight="@dimen/padd_marg_24dp"
+                style="@style/scoreButton"
                 android:onClick="firstPlace"
                 android:text="@string/first" />
 
             <Button
                 android:id="@+id/team_b_second"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/padd_marg_8dp"
-                android:layout_marginLeft="@dimen/padd_marg_24dp"
-                android:layout_marginRight="@dimen/padd_marg_24dp"
+                style="@style/scoreButton"
                 android:onClick="secondPlace"
                 android:text="@string/second" />
 
             <Button
                 android:id="@+id/team_b_tie"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/padd_marg_8dp"
-                android:layout_marginLeft="@dimen/padd_marg_24dp"
-                android:layout_marginRight="@dimen/padd_marg_24dp"
+                style="@style/scoreButton"
                 android:onClick="tied" />
         </LinearLayout>
 
