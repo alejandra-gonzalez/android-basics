@@ -120,7 +120,7 @@ public class ScoreKeeping extends AppCompatActivity {
     }
 
     /**
-     * The current winner's name and score are shown in salmon colored text.
+     * The current winner's name and score are shown in blue colored text.
      */
     public void showWinner(View view){
         if (scoreTeamA < scoreTeamB){
