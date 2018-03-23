@@ -10,16 +10,17 @@ import android.widget.TextView;
 
 public class ScoreKeeping extends AppCompatActivity {
 
-    int scoreTeamA;
-    int scoreTeamB;
+    private int scoreTeamA;
+    private int scoreTeamB;
 
-    TextView textViewA;
-    TextView textViewB;
-    TextView teamAScore;
-    TextView teamBScore;
+    private TextView textViewA;
+    private TextView textViewB;
 
-    final String teamAKey = "teamAscore";
-    final String teamBKey = "teamBscore";
+    private TextView teamAScore;
+    private TextView teamBScore;
+
+    final private String teamAKey = "teamAscore";
+    final private String teamBKey = "teamBscore";
 
     /**
      * Places team names in the right TextViews and "Tie with " Buttons.
@@ -40,8 +41,8 @@ public class ScoreKeeping extends AppCompatActivity {
         Button bTieButton = (Button) findViewById(R.id.team_b_tie);
 
         Intent intent = getIntent();
-        String textViewALabel = intent.getStringExtra("teamA");
-        String textViewBLabel = intent.getStringExtra("teamB");
+        final String textViewALabel = intent.getStringExtra("teamA");
+        final String textViewBLabel = intent.getStringExtra("teamB");
         textViewA.setText(textViewALabel);
         textViewB.setText(textViewBLabel);
 
