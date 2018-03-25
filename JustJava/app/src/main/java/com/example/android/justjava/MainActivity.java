@@ -3,6 +3,7 @@ package com.example.android.justjava;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import java.text.NumberFormat;
@@ -24,8 +25,12 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
+        CheckBox topping1 = (CheckBox) findViewById(R.id.topping1_checkbox);
+        boolean topping1State = topping1.isChecked();
+        CheckBox topping2 = (CheckBox) findViewById(R.id.topping2_checkbox);
+        boolean topping2State = topping2.isChecked();
         int price = calculatePrice();
-        displayMessage(createOrderSummary(price));
+        displayMessage(createOrderSummary(price, topping1State, topping2State));
     }
 
     /**
@@ -75,9 +80,29 @@ public class MainActivity extends AppCompatActivity {
      * Creates the order summary.
      *
      * @param price is the total for the order
+     * @param topping1 is a boolean that stores whether the users wants topping1
+     * @param topping2 is a boolean that stores whether the users wants topping2
      * @return A message containing the quantity and price
      */
-    private String createOrderSummary(int price) {
-        return "Name: Alex\nQuantity: " + quantity + "\nTotal: $" + price + "\nThank you!";
+    private String createOrderSummary(int price, boolean topping1, boolean topping2) {
+        String orderSummary = "Name: Alex\nAdd whipped cream? ";
+        orderSummary += yesAndNoForOrderSummary(topping1);
+        orderSummary += "Add chocolate? ";
+        orderSummary += yesAndNoForOrderSummary(topping2);
+        orderSummary += "Quantity: " + quantity + "\nTotal: $" + price + "\nThank you!";
+        return orderSummary;
+    }
+
+    /**
+     * Optional method. This checks a boolean and adds Yes or No to the order summary.
+     *
+     * @param topping is the topping you want to check
+     * @return Add topping or don't add topping
+     */
+    private String yesAndNoForOrderSummary(boolean topping) {
+        if (topping) {
+            return "Yes\n";
+        }
+        return "No\n";
     }
 }
