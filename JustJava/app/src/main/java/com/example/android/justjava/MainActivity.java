@@ -1,11 +1,14 @@
 package com.example.android.justjava;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.NumberFormat;
 
@@ -14,7 +17,7 @@ import java.text.NumberFormat;
  */
 public class MainActivity extends AppCompatActivity {
 
-    int quantity = 0;
+    int quantity = 1;
     int orderNumber = 0;
 
     @Override
@@ -33,10 +36,18 @@ public class MainActivity extends AppCompatActivity {
         boolean topping2State = topping2.isChecked();
 
         EditText orderNameEditText = (EditText) findViewById(R.id.orderName);
-        String orderName = orderNameEditText.getText().toString();
+        String orderName = nameHandling(orderNameEditText.getText().toString());
 
-        int price = calculatePrice();
-        displayMessage(createOrderSummary(price, topping1State, topping2State, orderName));
+        int price = calculatePrice(topping1State, topping2State);
+        String orderSummary = createOrderSummary(price, topping1State, topping2State, orderName);
+
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:"));
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Just Java Order for " +orderName);
+        intent.putExtra(Intent.EXTRA_TEXT, orderSummary);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
     }
 
     /**
@@ -48,52 +59,61 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This method displays the given text on the screen.
-     */
-    private void displayMessage(String message) {
-        TextView orderSummaryTextView = (TextView) findViewById(R.id.order_summary_text_view);
-        orderSummaryTextView.setText(message);
-    }
-
-    /**
      * This method is called when the plus button is clicked.
      */
     public void increment(View view) {
-        quantity = quantity + 1;
-        displayQuantity(quantity);
+        if (quantity == 100) {
+            Toast.makeText(this, "You cannot order more than 100 cups of coffee.", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            quantity = quantity + 1;
+            displayQuantity(quantity);
+        }
     }
 
     /**
      * This method is called when the minus button is clicked.
      */
     public void decrement(View view) {
-        if (quantity > 0) {
-            quantity = quantity - 1;
+        if (quantity == 1) {
+            Toast.makeText(this, "You must order at least 1 cup of coffee.", Toast.LENGTH_SHORT).show();
         }
-        displayQuantity(quantity);
+        else {
+            quantity = quantity - 1;
+            displayQuantity(quantity);
+        }
     }
 
     /**
      * Calculates the price of the order, assuming that each cup is $5.
      *
+     * @param topping1 stores whether user wants topping 1 or not
+     * @param topping2 stores whether user wants topping 2 or not
      * @return the price of the order
      */
-    private int calculatePrice() {
-        return quantity * 5;
+    private int calculatePrice(boolean topping1, boolean topping2) {
+        int price = 5;
+        if (topping1) {
+            price += 1;
+        }
+        if (topping2) {
+            price += 2;
+        }
+        return quantity * price;
     }
 
     /**
      * Creates the order summary.
      *
-     * @param price is the total for the order
-     * @param topping1 is a boolean that stores whether the users wants topping1
-     * @param topping2 is a boolean that stores whether the users wants topping2
+     * @param price     is the total for the order
+     * @param topping1  is a boolean that stores whether the users wants topping1
+     * @param topping2  is a boolean that stores whether the users wants topping2
      * @param orderName is a String containing the name for the order
      * @return A message containing the quantity and price
      */
     private String createOrderSummary(int price, boolean topping1, boolean topping2,
                                       String orderName) {
-        String orderSummary = nameHandling(orderName)+ "\nAdd whipped cream? ";
+        String orderSummary = orderName + "\nAdd whipped cream? ";
         orderSummary += yesAndNoForOrderSummary(topping1);
         orderSummary += "Add chocolate? ";
         orderSummary += yesAndNoForOrderSummary(topping2);
@@ -121,8 +141,8 @@ public class MainActivity extends AppCompatActivity {
      * @param name for the order
      * @return String with order number or order name
      */
-    private String nameHandling(String name){
-        if (name.length() == 0 || name.trim().length() == 0){
+    private String nameHandling(String name) {
+        if (name.length() == 0 || name.trim().length() == 0) {
             orderNumber += 1;
             return "Order Number " + orderNumber;
         }
