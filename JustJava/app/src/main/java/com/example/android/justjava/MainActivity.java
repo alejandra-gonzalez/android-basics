@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.text.NumberFormat;
@@ -14,6 +15,7 @@ import java.text.NumberFormat;
 public class MainActivity extends AppCompatActivity {
 
     int quantity = 0;
+    int orderNumber = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +31,12 @@ public class MainActivity extends AppCompatActivity {
         boolean topping1State = topping1.isChecked();
         CheckBox topping2 = (CheckBox) findViewById(R.id.topping2_checkbox);
         boolean topping2State = topping2.isChecked();
+
+        EditText orderNameEditText = (EditText) findViewById(R.id.orderName);
+        String orderName = orderNameEditText.getText().toString();
+
         int price = calculatePrice();
-        displayMessage(createOrderSummary(price, topping1State, topping2State));
+        displayMessage(createOrderSummary(price, topping1State, topping2State, orderName));
     }
 
     /**
@@ -82,10 +88,12 @@ public class MainActivity extends AppCompatActivity {
      * @param price is the total for the order
      * @param topping1 is a boolean that stores whether the users wants topping1
      * @param topping2 is a boolean that stores whether the users wants topping2
+     * @param orderName is a String containing the name for the order
      * @return A message containing the quantity and price
      */
-    private String createOrderSummary(int price, boolean topping1, boolean topping2) {
-        String orderSummary = "Name: Alex\nAdd whipped cream? ";
+    private String createOrderSummary(int price, boolean topping1, boolean topping2,
+                                      String orderName) {
+        String orderSummary = nameHandling(orderName)+ "\nAdd whipped cream? ";
         orderSummary += yesAndNoForOrderSummary(topping1);
         orderSummary += "Add chocolate? ";
         orderSummary += yesAndNoForOrderSummary(topping2);
@@ -104,5 +112,20 @@ public class MainActivity extends AppCompatActivity {
             return "Yes\n";
         }
         return "No\n";
+    }
+
+    /**
+     * Optional method. This method gives an order number to the order summary if no name is
+     * provided.
+     *
+     * @param name for the order
+     * @return String with order number or order name
+     */
+    private String nameHandling(String name){
+        if (name.length() == 0 || name.trim().length() == 0){
+            orderNumber += 1;
+            return "Order Number " + orderNumber;
+        }
+        return "Name: " + name;
     }
 }
