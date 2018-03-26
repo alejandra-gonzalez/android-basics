@@ -1,114 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
     tools:context="com.example.android.sailingscorekeeper.ScoreKeeping">
 
-    <LinearLayout
+    <ImageView style="@style/app_background" />
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/padd_marg_16dp">
+            android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="@dimen/width_height_0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                android:layout_marginTop="@dimen/padd_marg_16dp">
 
-                <TextView
-                    android:id="@+id/team_a_name"
-                    style="@style/teamNameTextView" />
+                <LinearLayout
+                    android:layout_width="@dimen/width_height_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/team_a_score"
-                    style="@style/teamScoreTextView" />
+                    <TextView
+                        android:id="@+id/team_a_name"
+                        style="@style/teamNameTextView" />
 
-                <Button
-                    android:id="@+id/team_a_first"
-                    style="@style/scoreButton"
-                    android:onClick="firstPlace"
-                    android:text="@string/first" />
+                    <TextView
+                        android:id="@+id/team_a_score"
+                        style="@style/teamScoreTextView" />
 
-                <Button
-                    android:id="@+id/team_a_second"
-                    style="@style/scoreButton"
-                    android:onClick="secondPlace"
-                    android:text="@string/second" />
+                    <Button
+                        android:id="@+id/team_a_first"
+                        style="@style/scoreButton"
+                        android:onClick="firstPlace"
+                        android:text="@string/first" />
 
-                <Button
-                    android:id="@+id/team_a_tie"
-                    style="@style/scoreButton"
-                    android:onClick="tied" />
+                    <Button
+                        android:id="@+id/team_a_second"
+                        style="@style/scoreButton"
+                        android:onClick="secondPlace"
+                        android:text="@string/second" />
+
+                    <Button
+                        android:id="@+id/team_a_tie"
+                        style="@style/scoreButton"
+                        android:onClick="tied" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/width_height_1dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/darker_gray">
+
+                </View>
+
+                <LinearLayout
+                    android:layout_width="@dimen/width_height_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/team_b_name"
+                        style="@style/teamNameTextView" />
+
+                    <TextView
+                        android:id="@+id/team_b_score"
+                        style="@style/teamScoreTextView" />
+
+                    <Button
+                        android:id="@+id/team_b_first"
+                        style="@style/scoreButton"
+                        android:onClick="firstPlace"
+                        android:text="@string/first" />
+
+                    <Button
+                        android:id="@+id/team_b_second"
+                        style="@style/scoreButton"
+                        android:onClick="secondPlace"
+                        android:text="@string/second" />
+
+                    <Button
+                        android:id="@+id/team_b_tie"
+                        style="@style/scoreButton"
+                        android:onClick="tied" />
+                </LinearLayout>
+
             </LinearLayout>
 
-            <View
-                android:layout_width="@dimen/width_height_1dp"
-                android:layout_height="match_parent"
-                android:background="@android:color/darker_gray">
-
-            </View>
-
             <LinearLayout
-                android:layout_width="@dimen/width_height_0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/team_b_name"
-                    style="@style/teamNameTextView" />
-
-                <TextView
-                    android:id="@+id/team_b_score"
-                    style="@style/teamScoreTextView" />
+                android:layout_margin="@dimen/padd_marg_16dp"
+                android:gravity="center_horizontal">
 
                 <Button
-                    android:id="@+id/team_b_first"
-                    style="@style/scoreButton"
-                    android:onClick="firstPlace"
-                    android:text="@string/first" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="resetGame"
+                    android:text="@string/resetGame" />
 
                 <Button
-                    android:id="@+id/team_b_second"
-                    style="@style/scoreButton"
-                    android:onClick="secondPlace"
-                    android:text="@string/second" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="showWinner"
+                    android:text="@string/winner" />
 
-                <Button
-                    android:id="@+id/team_b_tie"
-                    style="@style/scoreButton"
-                    android:onClick="tied" />
             </LinearLayout>
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/padd_marg_16dp"
-            android:gravity="center_horizontal">
+    </ScrollView>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="resetGame"
-                android:text="@string/resetGame" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="showWinner"
-                android:text="@string/winner" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-</ScrollView>
+</RelativeLayout>

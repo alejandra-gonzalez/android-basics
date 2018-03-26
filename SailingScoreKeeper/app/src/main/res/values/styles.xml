@@ -45,4 +45,12 @@
         <item name="android:layout_marginRight">@dimen/padd_marg_24dp</item>
     </style>
 
+    <style name="app_background">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:src">@drawable/bg</item>
+        <item name="android:alpha">0.7</item>
+    </style>
+
 </resources>
