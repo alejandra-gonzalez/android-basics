@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("mailto:"));
-        intent.putExtra(Intent.EXTRA_SUBJECT, "Just Java Order for " +orderName);
+        intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.orderName) +orderName);
         intent.putExtra(Intent.EXTRA_TEXT, orderSummary);
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private void displayQuantity(int number) {
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
-        quantityTextView.setText("" + number);
+        quantityTextView.setText(number);
     }
 
     /**
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void increment(View view) {
         if (quantity == 100) {
-            Toast.makeText(this, "You cannot order more than 100 cups of coffee.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.noMore), Toast.LENGTH_SHORT).show();
         }
         else {
             quantity = quantity + 1;
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void decrement(View view) {
         if (quantity == 1) {
-            Toast.makeText(this, "You must order at least 1 cup of coffee.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.noLess), Toast.LENGTH_SHORT).show();
         }
         else {
             quantity = quantity - 1;
@@ -113,11 +113,11 @@ public class MainActivity extends AppCompatActivity {
      */
     private String createOrderSummary(int price, boolean topping1, boolean topping2,
                                       String orderName) {
-        String orderSummary = orderName + "\nAdd whipped cream? ";
+        String orderSummary = orderName + getString(R.string.addTopping1);
         orderSummary += yesAndNoForOrderSummary(topping1);
-        orderSummary += "Add chocolate? ";
+        orderSummary += getString(R.string.addTopping2);
         orderSummary += yesAndNoForOrderSummary(topping2);
-        orderSummary += "Quantity: " + quantity + "\nTotal: $" + price + "\nThank you!";
+        orderSummary += getString(R.string.quantityOrdered) + quantity + getString(R.string.orderTotal) + price + getString(R.string.thanks);
         return orderSummary;
     }
 
@@ -129,9 +129,9 @@ public class MainActivity extends AppCompatActivity {
      */
     private String yesAndNoForOrderSummary(boolean topping) {
         if (topping) {
-            return "Yes\n";
+            return getString(R.string.yes);
         }
-        return "No\n";
+        return getString(R.string.no);
     }
 
     /**
@@ -144,8 +144,8 @@ public class MainActivity extends AppCompatActivity {
     private String nameHandling(String name) {
         if (name.length() == 0 || name.trim().length() == 0) {
             orderNumber += 1;
-            return "Order Number " + orderNumber;
+            return getString(R.string.orderNumber) + orderNumber;
         }
-        return "Name: " + name;
+        return getString(R.string.name)+": " + name;
     }
 }

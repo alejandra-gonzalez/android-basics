@@ -10,5 +10,17 @@
     <string name="toppings_header">Toppings</string>
     <string name="topping1">Whipped Cream</string>
     <string name="topping2">Chocolate</string>
-    <string name="nameHint">Name</string>
+    <string name="name">Name</string>
+    <string name="addTopping1">\nAdd whipped cream?\u0020</string>
+    <string name="addTopping2">Add chocolate?\u0020</string>
+    <string name="quantityOrdered">Quantity:\u0020</string>
+    <string name="orderTotal">\nTotal: $</string>
+    <string name="yes">Yes\n</string>
+    <string name="no">No\n</string>
+    <string name="orderNumber">Order Number\u0020</string>
+    <string name="orderName">Just Java Order for\u0020</string>
+    <string name="noMore">You cannot order more than 100 cups of coffee.</string>
+    <string name="noLess">You must order at least 1 cup of coffee.</string>
+    <string name="thanks">\nThank you!</string>
+
 </resources>

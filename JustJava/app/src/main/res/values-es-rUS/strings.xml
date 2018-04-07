@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sólo Java</string>
+    <string name="name">Nombre</string>
+    <string name="toppings_header">Ingredientes</string>
+    <string name="topping1">Crema batida</string>
+    <string name="quantity_label">Cantidad</string>
+    <string name="quantityOrdered">Cantidad:\u0020</string>
+    <string name="order_button_label">Ordenar</string>
+    <string name="addTopping1">\nAgregue la crema batida?\u0020</string>
+    <string name="addTopping2">Agregue el chocolate?\u0020</string>
+    <string name="thanks">\nGracias!</string>
+    <string name="yes">Si\n</string>
+    <string name="orderNumber">Orden Numero\u0020</string>
+    <string name="orderName">Sólo Java Orden para\u0020</string>
+    <string name="noMore">No puedes ordenar mas de 100 vasos de café.</string>
+    <string name="noLess">No puedes ordenar menos de 1 vaso de café.</string>
+</resources>
