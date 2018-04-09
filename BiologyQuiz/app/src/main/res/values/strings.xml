@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Biology Quiz!</string>
+    <string name="question1">A caterpillar is one of the stages of a butterfly’s life cycle.
+        What else is it called?</string>
+    <string name="q1option1">egg</string>
+    <string name="q1option2">adult</string>
+    <string name="q1option3">larva</string>
+    <string name="q1option4">pupa</string>
+    <string name="question2">Which animals are amphibians?</string>
+    <string name="q2option1">salamanders</string>
+    <string name="q2option2">dogs</string>
+    <string name="q2option3">frogs</string>
+    <string name="q2option4">turtles</string>
+    <string name="question3">How many bones do sharks have?</string>
+    <string name="imageDescription">Image of a shark</string>
+    <string name="question4">Tigers can swim up to 6 kilometers. True or False?</string>
+    <string name="q4Option1">True</string>
+    <string name="q4Option2">False</string>
+    <string name="submit">Submit Quiz</string>
+    <string name="oneQuestion">You got 1 question right!</string>
+    <string name="youGot">You got\u0020</string>
+    <string name="questions">\u0020questions right!</string>
+</resources>
