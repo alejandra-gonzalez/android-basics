@@ -12,7 +12,7 @@
         android:orientation="vertical">
 
         <TextView
-           style="@style/commonStyle1"
+            style="@style/commonStyle1"
             android:text="@string/question1" />
 
         <RadioGroup
@@ -80,9 +80,9 @@
             android:inputType="number" />
 
         <TextView
+            style="@style/commonStyle1"
             android:paddingTop="@dimen/space2"
-            android:text="@string/question4"
-            style="@style/commonStyle1"/>
+            android:text="@string/question4" />
 
         <RadioGroup
             android:layout_width="match_parent"
@@ -90,21 +90,21 @@
 
             <RadioButton
                 android:id="@+id/q4Answer"
-                android:text="@string/q4Option1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="@string/q4Option1" />
 
             <RadioButton
-                android:text="@string/q4Option2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="@string/q4Option2" />
 
         </RadioGroup>
 
         <Button
-            android:layout_marginTop="@dimen/space2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space2"
             android:onClick="submitQuiz"
             android:text="@string/submit" />
 
