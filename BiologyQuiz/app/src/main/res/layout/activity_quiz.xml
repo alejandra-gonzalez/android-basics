@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:padding="@dimen/space2"
     tools:context="com.example.android.biologyquiz.QuizActivity">
 
     <LinearLayout
@@ -12,9 +12,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="8dp"
+           style="@style/commonStyle1"
             android:text="@string/question1" />
 
         <RadioGroup
@@ -22,79 +20,56 @@
             android:layout_height="wrap_content">
 
             <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="8dp"
+                style="@style/commonStyle1"
                 android:text="@string/q1option1" />
 
             <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="8dp"
+                style="@style/commonStyle1"
                 android:text="@string/q1option2" />
 
             <RadioButton
                 android:id="@+id/q1Option3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="8dp"
+                style="@style/commonStyle1"
                 android:text="@string/q1option3" />
 
             <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="16dp"
+                style="@style/commonStyle2"
                 android:text="@string/q1option4" />
 
         </RadioGroup>
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="8dp"
-            android:paddingTop="16dp"
+            style="@style/commonStyle1"
             android:text="@string/question2" />
 
         <CheckBox
             android:id="@+id/q2Answer1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="8dp"
+            style="@style/commonStyle1"
             android:text="@string/q2option1" />
 
         <CheckBox
             android:id="@+id/q2Answer2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="8dp"
+            style="@style/commonStyle1"
             android:text="@string/q2option2" />
 
         <CheckBox
             android:id="@+id/q2Answer3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="8dp"
+            style="@style/commonStyle1"
             android:text="@string/q2option3" />
 
         <CheckBox
             android:id="@+id/q2Answer4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="8dp"
+            style="@style/commonStyle1"
             android:text="@string/q2option4" />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="16dp"
-            android:paddingTop="16dp"
+            style="@style/commonStyle2"
+            android:paddingTop="@dimen/space2"
             android:text="@string/question3" />
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/commonStyle2"
             android:contentDescription="@string/imageDescription"
-            android:paddingBottom="16dp"
             android:scaleType="centerCrop"
             android:src="@drawable/shark" />
 
@@ -105,11 +80,9 @@
             android:inputType="number" />
 
         <TextView
-            android:paddingTop="16dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/space2"
             android:text="@string/question4"
-            android:paddingBottom="8dp"/>
+            style="@style/commonStyle1"/>
 
         <RadioGroup
             android:layout_width="match_parent"
@@ -129,7 +102,7 @@
         </RadioGroup>
 
         <Button
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/space2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="submitQuiz"
